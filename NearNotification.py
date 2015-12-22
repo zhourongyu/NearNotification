@@ -39,7 +39,7 @@ def queryAndOrder(session_id, sid):
         quantity = item['quantity']
         activity_id = item['activity_id']
         e = datetime.datetime.strptime(end_time, "%Y-%m-%d %H:%M:%S")
-        if float(price) < 10 and e > datetime.datetime.now() and quantity > 0:
+        if float(price) < 2 and e > datetime.datetime.now() and quantity > 0:
             if (session_id is not None and sid is not None):
                 order(activity_id, session_id, sid)
             else:
